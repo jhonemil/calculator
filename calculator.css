@@ -1,3 +1,4 @@
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Container styles */
 .container {
     width: 100%;
     height: 100vh;
@@ -14,6 +16,7 @@
     justify-content: center;
 }
 
+/* Calculator styles */
 .calculator {
     background: #3e4452;
     padding: 20px;
@@ -23,7 +26,7 @@
 .calculator form input {
     border: 0;
     outline: 0;
-    width: 60px;
+    width: 60px; /* Default button width */
     height: 60px;
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -34,6 +37,7 @@
     margin: 10px;
 }
 
+/* Display styles */
 form .display {
     display: flex;
     justify-content: flex-end;
@@ -45,14 +49,9 @@ form .display input {
     flex: 1;
     font-size: 45px;
     box-shadow: none;
-    
 }
 
-form input.equal {
-    width: 145px;
-    color: aqua;
-}
-
+/* Operator button styles */
 form input.operator {
     color: aqua;
 }
@@ -61,24 +60,36 @@ form input.operator {
     color: white;
 }
 
-.calculator form input:hover {
+/* Button hover styles */
+calculator form input:hover {
     color: aqua;
 }
 
+/* Equal button styles */
+form input.equal {
+    width: 140px; /* Double the width of other buttons */
+    color: aqua;
+}
+
+/* Equal button hover styles */
 form input.equal:hover {
     color: white;
 }
 
-
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .calculator form input {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         font-size: 16px;
     }
-    
+
     form .display input {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    /* Adjust the width of the equal button for smaller screens */
+    form input.equal {
+        width: 130px;
     }
 }
-
